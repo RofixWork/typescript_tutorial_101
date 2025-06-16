@@ -1,0 +1,38 @@
+asasiyat ts
+----
+install + tsconfig + build paths + real project
+-------
+
+let|const name: type [string, number, boolean] = value;
+
+let age: number = 33;
+const isActive: boolean = true;
+
+number -> float / integer 
+
+primitive types : variable tqder anak t5zen fih qima whda (number, bool, string)
++ stack
+
+reference types: objects/class/arrays + heap (refernce variable kaychir l obj f lheap)
+
+collection of items
+
+obj = key: value
+
+
+
+VARIABLE = NUMBER | BOOLEAN
+
+
+
+name string = ahmed
+age number = 45
+isActive boolean awla string
+
+function sayHello -> name string, age numbber, isActive string awla bool -> true -> active | f -> not active
+
+
+
+intreface not support union types + extends
+
+type support union type (type a = string | number | boolean) + & -> wirata mn another type

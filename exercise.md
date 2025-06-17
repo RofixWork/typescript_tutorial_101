@@ -1,8 +1,3 @@
----
-
-### ✅ **TypeScript Exercises – Part 1**
-
-#### 🔹 **Exercise 1: Type Annotations**
 
 ```ts
 // Declare the following variables with the correct types:

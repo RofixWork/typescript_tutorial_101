@@ -1,0 +1,118 @@
+// type Id = number | string;
+// interface Teacher {
+//   id: Id,
+//   name: string,
+//   age: number,
+//   salary: number,
+//   city: string,
+//   country: string,
+//   gender?: string
+// }
+
+// const teachers: Teacher[] = [
+//   {
+//     id: 1,
+//     name: "ahmed",
+//     age: 23,
+//     salary: 1000,
+//     city: "agadir",
+//     country: "morocco"
+//   },
+//   {
+// id: 2,
+// name: "ahmed",
+// age: 23,
+// salary: 1000,
+// city: "agadir",
+// country: "",
+// gender:"male"
+// },
+
+// ]
+
+// teachers.push({
+// id: "",
+// name: "",
+// age: 0,
+// salary: 0,
+// city: "",
+// country: "",
+// gender:""
+// })
+
+// type AddFunction = (number1: number, number2: number) => number;
+// type CompareNumbers = (n1: number, n2: number) => string;
+
+// const add: AddFunction = (number1: number, number2: number): number => {
+//   return number1 + number2;
+// };
+
+// const result = add(5, 10);
+// console.log(result);
+
+// const compare: CompareNumbers = (n1, n2) => n1 > n2 ? "n1 is grather than n2" : n1 < n2 ? "n2 is grather than n1" : "Equal";
+
+// console.log(compare(20, 100))
+
+/**
+ * ManagementSystem
+ * id union type
+ * students {id, name, age, city}
+ * teachers {id, name, age, city, salary}
+ * CRUD OPS
+ * getAllTeachers / getAllStudents
+ * createTeacher(Teacher) / createStudent(Student)
+ * updateTeahcer(id, Teacher) / updateStudent(id, Student)
+ */
+
+type Id = string | number;
+interface Student {
+  id: Id,
+  name: string,
+  age: number,
+  city: string
+}
+interface Teacher {
+  id: Id,
+  name: string,
+  age: number,
+  city: string
+}
+
+interface CrudOperations {
+  teachers?: Teacher[],
+  students?: Student[],
+  getAllTeachers: () => Teacher[],
+  getAllStudents: () => Student[],
+  createTeacher: (teacher: Teacher) => Teacher,
+  createStudent: (student: Student) => Student,
+  updateTeacher: (id: number, teacher: Teacher) => void,
+  updateStudent : (id: number, student: Student) => void,
+  toString: (obj: Student | Teacher) => string
+}
+
+const managementSystem: CrudOperations = {
+getAllTeachers: function(): Teacher[] {
+throw new Error("Function not implemented.");
+},
+getAllStudents: function(): Student[] {
+throw new Error("Function not implemented.");
+},
+createTeacher: function(teacher: Teacher): Teacher {
+throw new Error("Function not implemented.");
+},
+createStudent: function(student: Student): Student {
+  return student;
+},
+updateTeacher: function(id: number,teacher: Teacher): void {
+throw new Error("Function not implemented.");
+},
+updateStudent: function(id: number,student: Student): void {
+throw new Error("Function not implemented.");
+}
+}
+
+const student: Student = {id: 1, name:"ahmed", city: "agadir", age: 23};
+const createdStudent: Student = managementSystem.createStudent(student);
+
+console.log(createdStudent)
